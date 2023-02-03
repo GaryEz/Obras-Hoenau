@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="/images/logo.png" width="100%" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/obras.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <title><%- title %> </title>
+    </head>
+    <%- include("partials/header.ejs") %>
+    <div class="container-whatsapp">
+        <a href="https://wa.me/+5491123864067?text=Quiero%20saber%20sobre%20sus%20servicios"><img src="/images/ws.png" alt=""></a>
+    </div>
+<body>
+
+    <h2 class="obras-title">En ejecucion</h2>
+
+    <div class="proyectos-destacados"> 
+    <% projects.forEach(project=>{ %> 
+        <% if (project.estado=="progreso") { %>
+                <div class="proyecto1">
+                    <a href="/obras/detalle/<%- project.id %> "><img class="imgZ" src="/images/obras/<%= project.image[0] %>" alt="">
+                    <div class="zoom "><p><%- project.nombre %> </p></div>
+                </a>
+                </div>
+                <% } %>
+                <% }) %>
+            </div>
+<h2 class="obras-title">Finalizados</h2>
+
+<div class="proyectos-destacados"> 
+    <% projects.forEach(project=>{ %> 
+        <% if (project.estado=="finalizado") { %>
+            <div class="proyecto1" >
+                <a  href="/obras/detalle/<%- project.id %>"><img class="imgZ" src="/images/obras/<%= project.image[0] %>" alt="">
+                <div style="background-color: rgba(95, 111, 148, 0.65);"><p><%- project.nombre %> </p></div>
+                </a>
+            </div>
+        <% } %>
+    <% }) %>
+        </div>
+</body>
+
+<%- include("partials/footer.ejs") %>
+<script src="/js/menuBurguer.js"></script>
+<script src="/js/zoom.js"></script>
+</html>

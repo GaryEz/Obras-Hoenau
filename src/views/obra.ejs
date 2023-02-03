@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="/images/logo.png" width="100%" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/obraDetalle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <title>Hoenau</title>
+    </head>
+    <%- include("partials/header.ejs") %>
+<body>
+
+<% obra.forEach(detalle => { %>
+    <div class="ful-img off " id="fulImgBox">
+        <img src="/images/obras/obra-1/<%= detalle.image[1] %>" id="
+        fulImg" alt="">
+    </div>
+    <div class="ful-img off " id="fulImgBox2">
+        <img src="/images/obras/obra-1/<%= detalle.image[2] %>" id="
+        fulImg" alt="">
+    </div>
+    <div class="ful-img off " id="fulImgBox3">
+        <img src="/images/obras/obra-1/<%= detalle.image[3] %>" id="
+        fulImg" alt="">
+    </div>
+<% }) %>
+
+
+<% obra.forEach(detalle => { %>
+    
+    <section class="detalle-main">
+        <div class="detalle-submain">
+
+        <article class="detalle-contenido-1">
+            <div><img src="/images/obras/<%= detalle.image[0] %>" alt=""></div>
+            <h2><%- detalle.nombre %></h2>
+        </article>
+
+
+        <article class="detalle-contenido-2">
+            <h2 class="detalle-contenido-2-tittle"><%- detalle.nombre %></h2>
+            <div>
+                <h3>Datos de obra</h3>
+                <p><%- detalle.datos %></p>
+            </div>
+            <div>
+                <h3>Descripcion de la obra</h3>
+                <p><%- detalle.descripcion %>
+                </p>
+            </div>
+        </article>
+
+
+        <% obra.forEach(detalle => { %>
+            
+            <article class="detalle-contenido-3">
+                <div><img src="/images/obras/obra-1/<%= detalle.image[1] %> " alt="" id="modal-img"></div>
+                <div><img src="/images/obras/obra-1/<%= detalle.image[2] %>" id="modal2-img"  alt=""></div>
+                <div><img src="/images/obras/obra-1/<%= detalle.image[3] %>" id="modal3-img"  alt=""></div>
+            </article>
+            <% }) %>    
+
+    </div>
+    </section>
+<% }) %>
+
+</body>
+<%- include("partials/footer.ejs") %>
+<script src="/js/menuBurguer.js"></script>
+<script src="/js/modal.js"></script>
+</html>
