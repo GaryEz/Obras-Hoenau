@@ -375,39 +375,88 @@ body div img {
 
 
 /*CONTACTO*/
-
-.form-contact .form-title{
-    background-color:rgba(95, 111, 148	,0.5 );
-    height: 51px;
+label{
     display: none;
 }
- .form-back{
-    height: 600px;
-    width:200px;
-    background-color: rgba(95, 111, 148	, 0.5);
-    margin-top: 50px;
-   /*   position: absolute;
-    left:-170px;
-    bottom: -250px; 
-    z-index: -1;
-    margin-bottom: 440px; */
-}
-.form-back2{
-    height: 600px;
-    width:200px;
-    background-color: rgba(95, 111, 148	, 0.5);
-    margin-top: 50px;
+.form-contact{
+    padding: 0px;
+    margin: 0px;
+    /* background-color: rgb(106, 142, 107); */
     display: flex;
     flex-direction: column;
-    justify-content: center ;
-    align-items: center ;
+width:100vw;
+background-color: rgba(95, 111, 148	, 0.3);
+}
+.form-contact form{
+    width: 100vw;
+    height: 340px;
+    display: flex;
+    flex-direction: row;
+    border:none;
+    flex-wrap: wrap;
+   max-width: 1100px;
+   margin: 0px auto;
+   justify-content: center;
+   padding: 0px;
 }
 
-.form-back2 p{
-    display: none;
-    text-align: center;
-    margin:20px auto
+.form-contact .form-title{
+    background-color:transparent;
+    height: 51px;
+    padding-top: 10px;
+    
 }
+
+.input-contact .style-input-contact{
+    padding: 10px;
+    margin-top: 1px;
+    border: none;
+    outline: none;
+    height: 40px;
+    width:480px;
+    border-radius: 3px;
+    font-size: 17px;
+}
+
+
+.input-contact{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.input-contact .coment {
+    height:203px;
+    width: 480px;
+    border:none;
+    border-radius: 4px;
+    background-color: white;
+    overflow: scroll;
+    resize: none;/* No deja que el text area cambie de tamaño */
+    outline: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-top: 0px;
+    font-family: var(--font-poppins);
+    font-size: 17px;
+}
+.submit-contact{
+    width:240px ;
+    height:45px;
+    border-radius: 4px;
+    border:1px solid  #5F6F94;
+    background-color: #5F6F94;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: var(--font-poppins);
+    margin-top: 15px;
+    margin-bottom: 27px;
+    cursor: pointer;
+}
+/* 
+
 
 
         .form-contact{
@@ -420,59 +469,18 @@ body div img {
 
         }
         
-        .form-contact form{
-            width: 800px;
-            display: flex;
-            flex-direction: column;
-            border:#5F6F94 1px solid;
-            box-shadow: 6px 6px 10px -2px rgba(95,111,148,1);
-           
+       
         }
         
-        .input-contact{
-            display: flex;
-            justify-content: right;
-            flex-direction: column;
-            padding: 30px;
-            margin-top: 10px;
-        }
+      
  
-        .input-contact .style-input-contact{
-            margin-top: 8px;
-            border: none;
-            border-bottom: 1px #5F6F94 solid;
-            outline: none;
-            height: 30px;
-        }
+      
         
-        .input-contact .coment {
-            border:1px #5F6F94 solid;
-            border-radius: 4px;
-            background-color:  rgba(254, 245, 172, 0.10);
-            overflow: scroll;
-            resize: none;/*No deja que el text area cambie de tamaño*/
-            outline: none;
-            padding-left: 5px;
-            padding-top: 5px;
-            margin-top: 10px;
-        }
         
         .contain-button-contact {
             text-align: center;
         }
-        .submit-contact{
-            width:120px ;
-            height: 50px;
-            border-radius: 4px;
-            border:1px solid  #5F6F94;
-            background-color: #5F6F94;
-            font-size: 19px;
-            font-weight: bold;
-            font-family: var(--font-poppins);
-            margin-top: 15px;
-            margin-bottom: 27px;
-            cursor: pointer;
-        }
+        
     
         .container-whatsapp{
                 position:  fixed;
@@ -491,10 +499,19 @@ body div img {
         .container-whatsapp a img {
             width: 60px;
             height: 60px;
-        }
+        } */
     }
 
     @media(min-width:1400px){
+        .form-contact form{
+            width: 100vw;
+            height: 340px;
+            display: flex;
+            flex-direction: row;
+            border:none;
+            flex-wrap: wrap;
+           max-width: 1400px;
+        }
         body .bodyPrincipal div img{
             width: 1400px;
             height: 700px;
@@ -506,75 +523,45 @@ body div img {
             height: 140px;
         }
         
-
+        .input-contact .style-input-contact{
+            padding: 10px;
+            margin-top: 1px;
+            border: none;
+            outline: none;
+            height: 40px;
+            width: 650px;
+            border-radius: 3px;
+        }
+        
+        
+        .input-contact{
+            display: flex;
+            justify-content: right;
+            flex-direction: column;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        .input-contact .coment {
+            height:203px;
+            width: 650px;
+            border:none;
+            border-radius: 4px;
+            background-color: white;
+            overflow: hidden;
+            resize: none;/* No deja que el text area cambie de tamaño */
+            outline: none;
+            padding-left: 10px;
+            padding-top: 5px;
+            margin-top: 0px;
+        }
          
 /*CONTACTO*/
 
-.form-contact .form-title{
-    background-color:rgba(95, 111, 148	,0.5 );
-    height: 51px;
-    display: none;
-}
- .form-back{
-    height: 600px;
-    width:200px;
-    background-color: rgba(95, 111, 148	, 0.5);
-    margin-top: 85px;
-   /*   position: absolute;
-    left:-170px;
-    bottom: -250px; 
-    z-index: -1;
-    margin-bottom: 440px; */
-}
-.form-back2{
-    height: 600px;
-    width:400px;
-    background-color: rgba(95, 111, 148	, 0.5);
-    margin-top: 85px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center ;
-    align-items: center ;
-}
 
-.form-back2 p{
-    display: flex;
 
-    margin:27px 0px 45px 0px;
-    font-size: 22px;
-    font-family:var(--font-poppins);
-    
-}
 
-#titulo{
-    display: flex;
-    font-family: var(--font-poppins);
-    margin-top: 45px;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.form-detalles{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center ;
-    margin-bottom: 150px;
-    
-   
-}
-.form-i{
-    display: flex;
-    flex-direction: column;
-    margin: 45px 20px 0px 0px;
-    font-size: 28px;
-}
-#tel2{
-    margin: 0px 0px 60px 0px;
-    padding: 41px 0px 00px 0px;
-}
-
-        .form-contact{
+        /* .form-contact{
             margin: 0px auto;
             width: 1400px;
             background-color: white;
@@ -612,7 +599,7 @@ body div img {
             border-radius: 4px;
             background-color:  rgba(254, 245, 172, 0.10);
             overflow:hidden;
-            resize: none;/*No deja que el text area cambie de tamaño*/
+            resize: none;
             outline: none;
             padding-left: 5px;
             padding-top: 5px;
@@ -635,7 +622,7 @@ body div img {
             font-family: var(--font-poppins);
             margin-top: 15px;
             margin-bottom: 27px;
-        }
+        } */
 
         .container-whatsapp{
             position:  fixed;

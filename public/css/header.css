@@ -304,13 +304,19 @@ margin-right: 15px;
 @media(min-width: 1115px){
 
     #preHeader{
-        height: 270px;
+        height:120px;
         max-width: 1800px;
-        margin: 0px auto;
+        margin:auto;
+        margin-top: 15px;
+        /* padding-bottom:10px ; */
+        padding-top: 15px;
+    
         
     }
     #preHeader img{
-        width:500px;height: 270px;
+        width:350px;height: 220px;
+        object-fit: contain;
+        margin-left: 50px;
     }
     #preHeader .contenedor{ 
     display: flex;

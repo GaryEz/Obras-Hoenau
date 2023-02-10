@@ -22,9 +22,9 @@
         </div>
     </div>
     <div class="container-whatsapp">
-        <a href="https://wa.me/+5491123864067?text=Quiero%20saber%20sobre%20sus%20servicios"><img src="/images/ws.png" alt=""></a>
+        <a href="https://wa.me/+5491159749673?text=Quiero%20consultar%20por..."><img src="/images/ws.png" alt=""></a>
     </div>
-    <h2 class="obrasDEs">Obras destacadas</h2>
+    <h2 class="obrasDEs">OBRAS DESTACADAS</h2>
     <div class="proyectos-destacados"> 
     
         <% proyectos_destacados.forEach(proyecto => { %>
@@ -40,45 +40,34 @@
 
     <section class="form-contact">
         <a name="contactoID"></a>
-        <div class="form-back2">
-            <p id="titulo">Informacion de contacto</p>
-            <div class="form-detalles">
-            <div class="form-i">
-                <i class="fa-regular fa-envelope"></i>
-                <a id="tel2" href="https://wa.me/+5491123864067?text=Quiero%20saber%20sobre%20sus%20servicios" style="text-decoration: none;color: black;"><i class="fa-solid fa-phone"></i></a>
-            </div>
-            <div>
-                <p>correo123456@gmail.com</p>
-                <a href="https://wa.me/+5491123864067?text=Quiero%20saber%20sobre%20sus%20servicios" style="text-decoration: none;color: black;"><p>+54 1121600000</p></a>
-                
-            </div>
-        </div>
-        </div>
-        <div class="form-title"><h2>INFORMACION DE CONTACTO</h2></div>
+        <div class="form-title"><h2>DEJANOS UN MENSAJE</h2></div>
         
         <form action="/nosotros" method="POST">
-            <div class="input-contact">
-                <label for="name">Nombre</label>
-                <input type="text" name="name" id="name" class="style-input-contact" placeholder="Ingrese su nombre">
-            </div>
-            <div class="input-contact">
-                <label for="phone">Teléfono</label>
-                <input type="number" name="phone" id="phone" class="style-input-contact" placeholder="Ingrese su número de teléfono">
+            <div class="form-bloque1">
+                <div class="input-contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" class="style-input-contact" placeholder="Nombre">
+                </div>
+                <div class="input-contact">
+                    <label for="phone">Asunto</label>
+                    <input type="text" name="phone" id="phone" class="style-input-contact" placeholder="Asunto">
+                </div>
+                
+                <div class="input-contact">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="style-input-contact" placeholder="E-mail">
+                </div>
             </div>
             
             <div class="input-contact">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="style-input-contact" placeholder="Ingrese su email">
-            </div>
-            <div class="input-contact">
-                <label for="comments">Comentarios</label>
-                <textarea name="comments" id="comments" cols="30" rows="7" class="coment" placeholder="Escriba su consulta"></textarea>
+                <label for="comments">Mensaje</label>
+                <textarea name="comments" id="comments" cols="30" rows="7" class="coment" placeholder="Mensaje"></textarea>
             </div>
             <div class="contain-button-contact">
                 <button type="submit" class="submit-contact" >Enviar</button>
             </div>
         </form>
-        <div class="form-back"></div>
+        
     </section>
 </body>
 <%- include("partials/footer.ejs") %>
